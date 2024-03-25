@@ -9,6 +9,13 @@ nxos1 = {
     "password": password,
     "device_type": "cisco_nxos",
 }
+nxos2 = {
+    "host": "nxos2.lasthop.io",
+    "username": "pyclass",
+    "password": password,
+    "device_type": "cisco_nxos",
+}
 
-net_connect = ConnectHandler(**nxos1)
-print(net_connect.find_prompt())
+for device in (nxos1, nxos2):
+    net_connect = ConnectHandler(**device)
+    print(net_connect.find_prompt())
