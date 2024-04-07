@@ -17,7 +17,7 @@ processed_list = []
 for arp_entry in arp_list:
     if re.search(r"^Protocol.*Interface", arp_entry):
         continue
-    _, ip_adr, _, mac_addr, _, intf = arp_entry.split()
+    _, ip_addr, _, mac_addr, _, intf = arp_entry.split()
     arp_dict = {"mac_addr": mac_addr, "ip_addr": ip_addr, "interface": intf}
     processed_list.append(arp_dict)
 
