@@ -17,7 +17,7 @@ device1 = {
 net_connect = ConnectHandler(**device1)
 print(net_connect.find_prompt())
 
-cfgs = ['show version', 'show lldp neighbors']
+cfgs = ['show version', 'show switch detail', 'show lldp neighbors']
 
 for cfg in cfgs:
     output = net_connect.send_command(cfg, use_textfsm=True)
