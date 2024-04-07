@@ -10,7 +10,7 @@ Internet  10.220.88.37          104   0001.00ff.0001  ARPA   GigabitEthernet0/0/
 Internet  10.220.88.38          161   0002.00ff.0001  ARPA   GigabitEthernet0/0/0
 """
 
-arp_data = arp_data_strip()
+arp_data = arp_data.strip()
 arp_list = arp_data.splitlines()
 
 processed_list = []
